@@ -18,6 +18,9 @@
 		836C27DD1EB1019F002FBCC7 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836C27DC1EB1019F002FBCC7 /* FlickrAPI.swift */; };
 		836C27DF1EB1065B002FBCC7 /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836C27DE1EB1065A002FBCC7 /* PhotoStore.swift */; };
 		836C27E11EB1080B002FBCC7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836C27E01EB1080B002FBCC7 /* Photo.swift */; };
+		83A235661EB14BDD005BF012 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A235651EB14BDD005BF012 /* PhotoCollectionViewCell.swift */; };
+		83D0EA6A1EB15681006C20AA /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D0EA691EB15681006C20AA /* ImageStore.swift */; };
+		83D0EA6C1EB15889006C20AA /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D0EA6B1EB15889006C20AA /* PhotoInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		836C27DC1EB1019F002FBCC7 /* FlickrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 		836C27DE1EB1065A002FBCC7 /* PhotoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
 		836C27E01EB1080B002FBCC7 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		83A235651EB14BDD005BF012 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		83D0EA691EB15681006C20AA /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		83D0EA6B1EB15889006C20AA /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +115,12 @@
 				836C27E01EB1080B002FBCC7 /* Photo.swift */,
 				836C27AC1EB0FEC8002FBCC7 /* AppDelegate.swift */,
 				836C27B01EB0FEC9002FBCC7 /* Main.storyboard */,
+				83A235651EB14BDD005BF012 /* PhotoCollectionViewCell.swift */,
 				831C30F21EB144AA00289643 /* PhotoDataSource.swift */,
 				836C27DC1EB1019F002FBCC7 /* FlickrAPI.swift */,
+				83D0EA691EB15681006C20AA /* ImageStore.swift */,
 				836C27DE1EB1065A002FBCC7 /* PhotoStore.swift */,
+				83D0EA6B1EB15889006C20AA /* PhotoInfoViewController.swift */,
 				836C27B31EB0FEC9002FBCC7 /* Assets.xcassets */,
 				836C27B51EB0FECA002FBCC7 /* LaunchScreen.storyboard */,
 				836C27B81EB0FECB002FBCC7 /* Info.plist */,
@@ -274,9 +283,12 @@
 				836C27DD1EB1019F002FBCC7 /* FlickrAPI.swift in Sources */,
 				836C27DB1EB0FF87002FBCC7 /* PhotoViewController.swift in Sources */,
 				836C27DF1EB1065B002FBCC7 /* PhotoStore.swift in Sources */,
+				83D0EA6A1EB15681006C20AA /* ImageStore.swift in Sources */,
 				831C30F31EB144AA00289643 /* PhotoDataSource.swift in Sources */,
+				83A235661EB14BDD005BF012 /* PhotoCollectionViewCell.swift in Sources */,
 				836C27AD1EB0FEC8002FBCC7 /* AppDelegate.swift in Sources */,
 				836C27E11EB1080B002FBCC7 /* Photo.swift in Sources */,
+				83D0EA6C1EB15889006C20AA /* PhotoInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +495,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = PhotoramaUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CSC2310.PhotoramaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,6 +509,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = PhotoramaUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CSC2310.PhotoramaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 enum PhotosResult {
     case success([Photo])
     case failure(Error)
@@ -24,6 +25,7 @@ enum PhotoError: Error {
 
 
 class PhotoStore {
+    let imageStore = ImageStore()
     
     private let session: URLSession = {
         let config = URLSessionConfiguration.default
@@ -61,11 +63,23 @@ class PhotoStore {
         let request = URLRequest(url: photoURL)
         print("image url")
         print(photoURL)
+        let photoKey = photo.photoID
+        if let image = imageStore.image(forKey: photoKey) {
+            OperationQueue.main.addOperation {
+                completion(.success(image))
+            }
+            return
+        }
         
         let task = session.dataTask(with: request) {
             (data, response, error) -> Void in
             
             let result = self.processImageRequest(data: data, error: error)
+            
+            if case let .success(image) = result {
+                self.imageStore.setImage(image, forKey: photoKey)
+            }
+            
             OperationQueue.main.addOperation{
                 completion(result)
             }
