@@ -17,8 +17,9 @@ enum FlickrError: Error {
 }
 
 struct FlickrAPI {
-    private static let baseURLString = "https://api.flickr.com/services/rest"
+    private static let baseURLString = "https://api.flickr.com/services/rest/"
     private static let apiKey = "a6d819499131071f158fd740860a5a88"
+    
     
     private static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -39,7 +40,7 @@ struct FlickrAPI {
             "method": method.rawValue,
             "format": "json",
             "nojsoncallback":"1",
-            "apiKey":apiKey
+            "api_key":apiKey
         ]
         
         for (key, value) in baseParams {
@@ -103,3 +104,7 @@ struct FlickrAPI {
     
     
 }
+
+
+
+
